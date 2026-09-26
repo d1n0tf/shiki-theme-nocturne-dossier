@@ -5810,4 +5810,473 @@ article.b-topic.b-review-topic > .inner .body[itemprop="text"] .b-spoiler_block 
   border: 0 !important;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Dashboard user panel and catalogue shortcuts                               */
+/* -------------------------------------------------------------------------- */
+
+/* The dashboard's v2 user section has its own light legacy surfaces. Keep
+   the rules scoped to the dashboard so similarly named utility classes on
+   other pages are left alone. */
+.p-dashboards-show .fc-user-sections .f-user {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(145deg, rgba(14, 21, 35, 0.96), rgba(7, 11, 20, 0.98)) !important;
+  border: 1px solid var(--nd-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24), inset 0 1px rgba(255, 255, 255, 0.04) !important;
+  color: var(--nd-text) !important;
+  overflow: hidden !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--nd-text) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 25px !important;
+  margin: 0 0 9px !important;
+  padding: 0 0 7px !important;
+  border-bottom: 1px solid var(--nd-line) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label > span {
+  color: var(--nd-text) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label .misc-links {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  margin-left: auto !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label .misc-links a {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 2px 5px !important;
+  color: var(--nd-text-faint) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label .misc-links a::after {
+  content: none !important;
+  display: none !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label .misc-links a + a::before {
+  content: "/" !important;
+  display: inline-block !important;
+  margin-right: 8px !important;
+  color: var(--nd-line) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .label .misc-links a:hover {
+  color: var(--nd-pink-hi) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .b-user_rate-history {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 76px !important;
+  margin: 0 !important;
+  padding: 7px !important;
+  background: rgba(19, 27, 44, 0.68) !important;
+  border: 1px solid rgba(141, 158, 210, 0.16) !important;
+  border-radius: 6px !important;
+  color: var(--nd-text) !important;
+  transition: background var(--nd-transition), border-color var(--nd-transition), transform var(--nd-transition) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .b-user_rate-history:hover {
+  background: rgba(33, 42, 66, 0.86) !important;
+  border-color: rgba(240, 140, 172, 0.38) !important;
+  color: var(--nd-text) !important;
+  transform: translateY(-1px) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .b-user_rate-history + .b-user_rate-history {
+  margin-top: 6px !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .my-list .b-nothing_here {
+  margin: 0 !important;
+  padding: 8px 0 2px !important;
+  color: var(--nd-text-faint) !important;
+  font-size: 12px !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history picture {
+  box-sizing: border-box !important;
+  display: block !important;
+  flex: 0 0 48px !important;
+  width: 48px !important;
+  height: 60px !important;
+  margin: 0 9px 0 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(188, 196, 225, 0.2) !important;
+  border-radius: 4px !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history picture img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .content {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  padding: 1px 0 !important;
+  color: var(--nd-text) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .title {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  margin: 0 0 6px !important;
+  color: var(--nd-text) !important;
+  font-size: 12px !important;
+  line-height: 1.12 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .title .name-en,
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .title .name-ru {
+  display: block !important;
+  overflow: hidden !important;
+  color: inherit !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .title .name-ru {
+  margin-top: 2px !important;
+  color: var(--nd-text-soft) !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .progress {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 4px !important;
+  margin: 0 0 7px !important;
+  overflow: hidden !important;
+  background: rgba(188, 196, 225, 0.16) !important;
+  border-radius: 2px !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .progress .completed {
+  height: 100% !important;
+  background: linear-gradient(90deg, var(--nd-violet), var(--nd-pink)) !important;
+  border-radius: inherit !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .status-counter {
+  display: flex !important;
+  align-items: baseline !important;
+  min-width: 0 !important;
+  color: var(--nd-text-soft) !important;
+  font-size: 10px !important;
+  line-height: 1.1 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .status-counter .status {
+  min-width: 0 !important;
+  margin-right: 8px !important;
+  overflow: hidden !important;
+  color: var(--nd-teal) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .status-counter .counter {
+  margin-left: auto !important;
+  color: var(--nd-text) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .status-counter .counter span {
+  color: var(--nd-text-faint) !important;
+  font-size: 9px !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .score-time {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  margin-top: auto !important;
+  color: var(--nd-text-faint) !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .score-time time {
+  margin-left: auto !important;
+  color: var(--nd-text-faint) !important;
+  white-space: nowrap !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .score-time .stars-container {
+  position: relative !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin-right: 7px !important;
+  color: var(--nd-text-faint) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .score-time .stars-container .background {
+  color: rgba(188, 196, 225, 0.28) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-user .b-user_rate-history .score-time .stars-container .score {
+  color: var(--nd-gold) !important;
+}
+
+/* Shortcut section: normalize the legacy flex/absolute placement into three
+   stable columns, then let the tags form compact rows inside each column. */
+.p-dashboards-show .fc-user-sections .f-sections {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  background: linear-gradient(145deg, rgba(14, 21, 35, 0.86), rgba(7, 11, 20, 0.94)) !important;
+  border: 1px solid var(--nd-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.035) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines,
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline,
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .f-tags {
+  box-sizing: border-box !important;
+  position: relative !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline .midheadline {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 32px !important;
+  margin: 0 !important;
+  padding: 7px 9px !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, rgba(27, 37, 58, 0.96), rgba(12, 18, 31, 0.98)) !important;
+  border: 1px solid rgba(188, 196, 225, 0.17) !important;
+  border-radius: 5px !important;
+  color: var(--nd-text) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline .midheadline::before {
+  flex: 0 0 6px !important;
+  width: 6px !important;
+  height: 6px !important;
+  margin: 0 7px 0 0 !important;
+  background: var(--nd-gold) !important;
+  box-shadow: 0 0 7px rgba(220, 192, 138, 0.55) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline:nth-child(1) .midheadline::before {
+  background: var(--nd-pink) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline:nth-child(2) .midheadline::before {
+  background: var(--nd-violet) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline:nth-child(3) .midheadline::before {
+  background: var(--nd-teal) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline .midheadline > a {
+  display: block !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  color: var(--nd-text) !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-headlines .f-headline .midheadline > a:hover {
+  color: var(--nd-pink-hi) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags {
+  margin-top: 8px !important;
+  align-items: stretch !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .f-tags {
+  min-height: 96px !important;
+  padding: 8px !important;
+  background: rgba(9, 14, 24, 0.62) !important;
+  border: 1px solid rgba(188, 196, 225, 0.12) !important;
+  border-radius: 6px !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .f-tags .tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-content: flex-start !important;
+  gap: 6px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link {
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 26px !important;
+  margin: 0 !important;
+  padding: 4px 8px !important;
+  background: rgba(141, 158, 210, 0.1) !important;
+  border: 1px solid rgba(141, 158, 210, 0.22) !important;
+  border-radius: 4px !important;
+  color: var(--nd-text-soft) !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  transition: background var(--nd-transition), border-color var(--nd-transition), color var(--nd-transition), transform var(--nd-transition) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link::before {
+  content: "#" !important;
+  padding: 0 4px 0 0 !important;
+  color: currentColor !important;
+  opacity: 0.65 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link.anime-tag {
+  background: rgba(234, 117, 153, 0.1) !important;
+  border-color: rgba(234, 117, 153, 0.25) !important;
+  color: #f09ab2 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link.manga-tag {
+  background: rgba(141, 158, 210, 0.11) !important;
+  border-color: rgba(141, 158, 210, 0.27) !important;
+  color: #aab8e2 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link.ranobe-tag {
+  background: rgba(142, 200, 189, 0.1) !important;
+  border-color: rgba(142, 200, 189, 0.25) !important;
+  color: #9dd6ca !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link:hover {
+  background: rgba(240, 140, 172, 0.18) !important;
+  border-color: rgba(240, 140, 172, 0.48) !important;
+  color: var(--nd-text) !important;
+  transform: translateY(-1px) !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link[href*="/recommendations/"] {
+  position: static !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 4px 8px !important;
+  background: rgba(220, 192, 138, 0.1) !important;
+  border: 1px solid rgba(220, 192, 138, 0.24) !important;
+  color: var(--nd-gold) !important;
+  line-height: 1.2 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .fc-tags .tag-link[href*="/recommendations/"]::after {
+  content: none !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .ranobe-tags .forum-container {
+  width: 100% !important;
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .ranobe-tags .forum-container .b-link_button {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 28px !important;
+  margin: 0 !important;
+  padding: 6px 9px !important;
+  background: linear-gradient(180deg, rgba(28, 38, 59, 0.96), rgba(12, 18, 31, 0.98)) !important;
+  border: 1px solid rgba(141, 158, 210, 0.24) !important;
+  border-radius: 4px !important;
+  color: var(--nd-text-soft) !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+.p-dashboards-show .fc-user-sections .f-sections .ranobe-tags .forum-container .b-link_button:hover {
+  border-color: rgba(240, 140, 172, 0.45) !important;
+  color: var(--nd-text) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .p-dashboards-show .fc-user-sections .f-user {
+    width: 100% !important;
+    margin: 0 0 10px !important;
+  }
+
+  .p-dashboards-show .fc-user-sections .f-sections {
+    width: 100% !important;
+  }
+
+  .p-dashboards-show .fc-user-sections .f-sections .fc-headlines,
+  .p-dashboards-show .fc-user-sections .f-sections .fc-tags {
+    grid-template-columns: 1fr !important;
+  }
+
+  .p-dashboards-show .fc-user-sections .f-sections .fc-tags .f-tags {
+    min-height: 0 !important;
+  }
+}
+
 } /* end @media all */
